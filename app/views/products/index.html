@@ -1,0 +1,20 @@
+<div class="container">
+  <% @products.each do |category, products|%>
+    <div>
+      <h2 class="text-center"><%= category.name %></h2>
+      <hr>
+    </div>
+      <% products.each_slice(3) do |slice|%>
+          <div class="row product-container text-center">
+          <% slice.each do |product| %>
+              <div class="col-lg-4 product-description">
+                <% if product.default_image %>
+                  <%= image_tag product.default_image.path%>
+                <% end %>
+                <p><%= link_to product.name, product_path(product.permalink) %>|| <%= number_to_currency product.price %></p>
+              </div>
+          <% end %>
+          </div>
+      <% end %>
+  <% end %>
+</div>

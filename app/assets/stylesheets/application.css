@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *= require_tree
+ *= require_self
+ */
+ body{
+ 	background-color:#E2B13C;
+ }
+
+ table{
+ 	background-color: #ECF0F1;
+ }
+
+ .cart{
+ 	z-index: 100;
+ 	right:0;
+ 	position: fixed;
+ 	border-radius: 10px;
+ 	padding: 5px;
+ 	margin: 5px;
+ 	background-color:#F5D76E;
+ 	box-shadow: 0px 0px 10px 6px #A17917;
+ }
+
+ .cart > img{
+ 	float:right;
+ 	width: 32px;
+ 	height: 32px;
+ }
+
+.page-header img{
+	height:200px;
+	width:80%;
+}
+
+.page-header ul{
+	list-style-type:none;		
+}
+.page-header li{
+	display:inline;
+}
+
+ .navigation {
+ 	font-family: 'Quicksand', sans-serif;
+ 	font-size: 150%;
+ 	margin: 0 10px;
+ }
+.cart a{
+ 	text-decoration: none;
+ 	 color: #A17917;
+ }
+.cart a:hover{
+	color: #ECF0F1;
+	font-size: 110%;
+}
+
+.navigation a{
+ 	text-decoration: none;
+ 	 color: #A17917;
+ }
+.navigation a:hover{
+	color: #ECF0F1;
+	font-size: 110%;
+}

@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="row product-container">
+		<div class="col-md-4 text-center show-product">
+			<h1><%= @product.name %></h1>
+			<%= simple_format @product.description %>
+			 <h3><b><%= number_to_currency @product.price %>///</b>
+  			 <%= link_to "Add to basket", product_path(@product.permalink), class: 'btn btn-success', :method => :post %>
+  			 </h3> 
+  			 <p><%= link_to "Back" , products_path , class: 'btn btn-info'%></p>
+		</div>
+		<div class="col-md-6 show-product">
+			<% if @product.default_image %>
+  				<%= image_tag @product.default_image.path, :width => '600px'%>
+			<% end %>
+			<p><%= @product.short_description %></p>
+		</div>
+	</div>
+</div>

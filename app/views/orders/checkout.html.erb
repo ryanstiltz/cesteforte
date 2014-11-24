@@ -1,0 +1,24 @@
+<div class="container">
+<h2>Checkout</h2>
+<div class="well">
+<%= render 'items', :order => @order %>
+</div>
+    <div class="well text-center">
+    <%= simple_form_for(@order, :url => checkout_path, html: {class: 'form-horizontal' }) do |f| %>
+      
+        <%= f.input :first_name, placeholder: "First Name", label: 'First Name'%> <%= f.input :last_name, placeholder:"Last Name", label:'Last Name'%>
+        <%= f.input :billing_address1, placeholder: "Street", label: 'Street Address'%>
+        <%= f.input :billing_address2, placeholder: "Apt #" %>
+        <%= f.input :billing_address3, placeholder: "City", label:'City'%>    
+        <%= f.input :billing_address4, placeholder: "State", label: 'State' %>
+        <%= f.input :billing_postcode, placeholder: "00000", label: 'Zipcode' %>
+
+        <%= f.collection_select :billing_country_id, Shoppe::Country.ordered, :id, :name, :include_blank => true%>
+        <%= f.input :email_address, label: 'Email Address' %>
+        <%= f.input :phone_number, label: 'Phone Number' %>
+
+        <%= f.submit 'Continue', class: 'btn btn-success' %>
+      
+    <% end %>
+    </div>
+</div>

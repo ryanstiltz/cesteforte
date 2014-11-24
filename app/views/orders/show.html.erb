@@ -1,0 +1,12 @@
+<div class="container">
+	<div class="panel panel-warning">
+		<div class="panel-heading"><h2>Your basket</h2></div>
+		<div class="panel-body">
+			<%= render 'items', :order => current_order %>
+		</div>
+		<div class="panel-footer">
+			<%= link_to 'Empty basket', basket_path, class: "btn btn-danger" ,:method => :delete %>
+      <%= link_to "Checkout", checkout_path , class: "btn btn-success pull-right"%>
+		</div>
+	</div>	
+</div>
