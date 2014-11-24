@@ -41,3 +41,4 @@ gem 'spring',        group: :development
 gem 'shoppe'
 gem 'simple_form'
 gem 'paypal-sdk-rest'
+gem 'pg'
