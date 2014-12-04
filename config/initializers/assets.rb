@@ -8,3 +8,4 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( bootstrap.min.css )
 Rails.application.config.assets.precompile += %w( orders.css)
 Rails.application.config.assets.precompile += %w( products.css )
+Rails.application.config.assets.precompile += %w( site.css)
