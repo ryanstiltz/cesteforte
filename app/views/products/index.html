@@ -2,10 +2,6 @@
 <%= stylesheet_link_tag "site"%>
 <div class="container">
   <% @products.each do |category, products|%>
-    <div>
-      <h2 class="text-center"><%= category.name %></h2>
-      <hr>
-    </div>
       <% products.each_slice(3) do |slice|%>
           <div class="row product-container text-center">
           <% slice.each do |product| %>

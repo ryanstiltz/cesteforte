@@ -4,7 +4,11 @@
 
 
 .product-container {
-	background-color:#F5D76E;
+  background: asset-url("background.jpg", image) repeat; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .product-description{
@@ -15,7 +19,7 @@
 	width:300px;
 	height:400px;
 	border-radius: 10px;
-	box-shadow: 0px 0px 10px 6px #A17917;
+	box-shadow: 0px 0px 10px 6px #e3a066;
 	margin-bottom: 10px;
 }
 
