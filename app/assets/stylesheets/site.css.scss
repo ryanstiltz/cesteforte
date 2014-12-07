@@ -8,22 +8,18 @@ body {
  	background-color: #ECF0F1;
  }
 
- .cart{
- 	z-index: 100;
- 	right:0;
- 	position: fixed;
- 	border-radius: 10px;
- 	padding: 5px;
- 	margin: 5px;
- 	background-color:#F5D76E;
- 	box-shadow: 0px 0px 10px 6px #A17917;
- }
 
- .cart > img{
- 	float:right;
- 	width: 32px;
- 	height: 32px;
- }
+.navbar {
+	background-color:#fbf0e8;
+}
+.navbar a{
+	color:#e7ad7c;
+	text-decoration:none;	
+}
+
+.navbar li{
+font-family: "Lucida Console", Monaco, monospace;	
+}
 
 .navbar-header > img{
 	height: 50px;
@@ -31,4 +27,5 @@ body {
 
 .navbar-right > img {
 	height: 45px;
+	padding: 5px;
 }
