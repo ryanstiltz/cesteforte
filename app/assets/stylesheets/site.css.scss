@@ -1,6 +1,7 @@
 
 body { 
 	background-color:#e7ad7c;
+	padding-top:80px;
 }
 
  table{
@@ -24,39 +25,10 @@ body {
  	height: 32px;
  }
 
-.page-header img{
-	height:200px;
-	width:80%;
-}
+.navbar-header > img{
+	height: 50px;
+} 
 
-.page-header ul{
-	list-style-type:none;		
-}
-.page-header li{
-	display:inline;
-}
-
- .navigation {
- 	font-family: "Lucida Console", Monaco, monospace;
- 	font-size: 90%;
- 	margin: 0 10px;
- }
-.cart a{
- 	text-decoration: none;
- 	 color: #A17917;
- }
-.cart a:hover{
-   color: transparent;
-   text-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
-
-.navigation a{
- 	text-decoration: none;
- 	 color: #A17917;
- }
-.navigation a:hover{
-	color: #ECF0F1;
-	font-size: 110%;
-	 color: transparent;
-   text-shadow: 0 0 5px rgba(255, 255, 255,0.5);
+.navbar-right > img {
+	height: 45px;
 }

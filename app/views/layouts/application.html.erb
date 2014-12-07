@@ -11,25 +11,33 @@
 <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<% if has_order? %>
-  <div class="cart">
-    <b><%= current_order.total_items%>X</b>
-    <%= link_to number_to_currency(current_order.total_before_tax), basket_path %>
-    <img src="<%= asset_path 'carticon.png'%>" >
-  </div>
-<% end %>
 
-<div class="container">
-  <div class="page-header text-center">
-    <h1> <a href="\"></a><img src="<%= asset_path 'logoAccent.png' %>"></a></h1>
-      <ul class="navigation">
-        <a href="/products"><li>Store </li></a>||
-        <li>Look_Book </li>||
-        <li>About </li>||
-        <li>Contact </li>
-    </ul>  
-  </div>
-</div>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+         <img alt="Ceste Forte" src="<%= asset_path 'logoAccent.png' %>">
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/products">Store</a></li>
+        </ul>
+        <div class="navbar-right">
+        <% if has_order? %>
+          <b><%= current_order.total_items%>X</b>
+          <%= link_to number_to_currency(current_order.total_before_tax), basket_path %>
+          <img src="<%= asset_path 'carticon.png'%>" >
+        <% end %>
+      </div>
+      </div>
+    </div>
+  </nav>
+
 
 
 <%= yield %>
