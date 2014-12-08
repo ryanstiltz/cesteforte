@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 	def index
 		@products = Shoppe::Product.root.ordered.includes(:product_category, :variants)
+		puts YAML::dump(@products)
     	@products = @products.group_by(&:product_category)
 	end
 

@@ -9,6 +9,12 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.product-container a{
+	color:#FFFFFF;
+	text-decoration:none;
 }
 
 .product-description{
@@ -24,5 +30,6 @@
 }
 
 .show-product{
-	margin-left: 30px;
+	padding: 0 10px;
+	margin-right: 30px;
 }

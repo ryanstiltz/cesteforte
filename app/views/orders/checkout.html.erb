@@ -4,18 +4,22 @@
 <%= render 'items', :order => @order %>
 </div>
     <div class="well text-center">
-    <%= simple_form_for(@order, :url => checkout_path, html: {class: 'form-horizontal' }) do |f| %>
-      
-        <%= f.input :first_name, placeholder: "First Name", label: 'First Name'%> <%= f.input :last_name, placeholder:"Last Name", label:'Last Name'%>
+  
+
+            <%= simple_form_for @order, :url => checkout_path, defaults: { input_html: { class: 'form-control input-lg' } } ,html: {class: 'form-inline' } do |f| %>
+      <div class="row">
+        <%= f.input :first_name, class: 'form-control input-lg', placeholder: "First Name", label: 'First Name'%> 
+        <%= f.input :last_name, placeholder:"Last Name", label:'Last Name'%>
+    </div>
         <%= f.input :billing_address1, placeholder: "Street", label: 'Street Address'%>
         <%= f.input :billing_address2, placeholder: "Apt #" %>
         <%= f.input :billing_address3, placeholder: "City", label:'City'%>    
         <%= f.input :billing_address4, placeholder: "State", label: 'State' %>
         <%= f.input :billing_postcode, placeholder: "00000", label: 'Zipcode' %>
 
-        <%= f.collection_select :billing_country_id, Shoppe::Country.ordered, :id, :name, :include_blank => true%>
-        <%= f.input :email_address, label: 'Email Address' %>
-        <%= f.input :phone_number, label: 'Phone Number' %>
+        <%= f.input :billing_country_id, :as => :hidden ,:input_html => { :value => "United States" } %>
+        <%= f.input :email_address, label: 'Email Address', placeholder: "gucci@moneymaker.com" %>
+        <%= f.input :phone_number, label: 'Phone Number', placeholder:"7777777777" %>
 
         <%= f.submit 'Continue', class: 'btn btn-success' %>
       

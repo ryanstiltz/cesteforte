@@ -5,12 +5,12 @@
       <% products.each_slice(3) do |slice|%>
           <div class="row product-container text-center">
           <% slice.each do |product| %>
+            <% if product.active %>
               <div class="col-lg-4 product-description">
-                <% if product.default_image %>
-                  <%= image_tag product.default_image.path%>
-                <% end %>
-                <p><%= link_to product.name, product_path(product.permalink) %>|| <%= number_to_currency product.price %></p>
+                <%= link_to image_tag(product.default_image.path), product_path(product.permalink) %>
+                <p><strong><%=product.name %></strong>//<%= number_to_currency product.price %></p>
               </div>
+              <% end %>
           <% end %>
           </div>
       <% end %>
